@@ -1,8 +1,8 @@
-# 🔐 NIYAM — ZK-Based Privacy-Preserving Anonymisation System (Complete Overview)
+# NIYAM — ZK-Based Privacy-Preserving Anonymisation System (Complete Overview)
 
 ---
 
-# 📌 1. Problem Context
+# 1. Problem Context
 
 Regulatory systems like CDSCO process **highly sensitive data (PII + PHI)**.
 
@@ -13,7 +13,7 @@ Challenges:
 * Lack of auditability
 * Compliance with DPDP, NDHM, ICMR
 
-👉 Requirement:
+Requirement:
 A system that ensures:
 
 * **No PII exposure**
@@ -22,7 +22,7 @@ A system that ensures:
 
 ---
 
-# 🎯 2. Solution Overview
+#  2. Solution Overview
 
 NIYAM implements a **2-layer privacy architecture**:
 
@@ -37,13 +37,13 @@ NIYAM implements a **2-layer privacy architecture**:
 
 ---
 
-👉 Core Idea:
+Core Idea:
 
 > **We do not store data — we store cryptographic proofs of data.**
 
 ---
 
-# 🧠 3. ZK-Inspired Commitment System
+#  3. ZK-Inspired Commitment System
 
 We use a **commitment scheme based on HMAC**:
 
@@ -59,13 +59,13 @@ commitment = HMAC(secret_key, value)
 
 ---
 
-⚠️ Important:
+Important:
 
 > This is **ZK-inspired**, not full Zero-Knowledge Proofs.
 
 ---
 
-# 🏗️ 4. Two-Step Anonymisation (CDSCO Requirement)
+#  4. Two-Step Anonymisation (CDSCO Requirement)
 
 As per guidelines :
 
@@ -99,7 +99,7 @@ Name → [REDACTED]
 
 ---
 
-# 🔄 5. End-to-End Pipeline
+#  5. End-to-End Pipeline
 
 ```text
 Input Document
@@ -121,18 +121,18 @@ QR Proof Generation (Operator Layer)
 
 ---
 
-# 🔍 6. Detection Layer
+# 6. Detection Layer
 
 Hybrid approach:
 
 * **NER (spaCy transformer)** → names, locations
 * **Regex** → Aadhaar, phone, email
 
-👉 Ensures high recall for Indian healthcare data
+ Ensures high recall for Indian healthcare data
 
 ---
 
-# 🔐 7. Cryptographic Layer (ZK Commitments)
+#  7. Cryptographic Layer (ZK Commitments)
 
 Each detected entity:
 
@@ -159,7 +159,7 @@ NOT stored:
 
 ---
 
-# 🔑 8. Key Management
+#  8. Key Management
 
 Three isolated keys:
 
@@ -179,7 +179,7 @@ Features:
 
 ---
 
-# 🧾 9. Operator Accountability Layer
+#  9. Operator Accountability Layer
 
 ---
 
@@ -222,7 +222,7 @@ Linked to anonymisation process
 
 ---
 
-# 🚨 10. Statistical Inference Risk (CRITICAL)
+#  10. Statistical Inference Risk (CRITICAL)
 
 ---
 
@@ -240,20 +240,20 @@ Example:
 
 ---
 
-👉 This is called:
+This is called:
 
 * attribute disclosure
 * linkage attack
 
 ---
 
-⚠️ Important:
+Important:
 
 > HMAC does NOT protect against this
 
 ---
 
-# 🛡️ 11. Mitigation Strategy
+#  11. Mitigation Strategy
 
 ---
 
@@ -319,7 +319,7 @@ BUT NOT:
 
 ---
 
-# 🔬 13. Data Lifecycle
+#  13. Data Lifecycle
 
 ```text
 Raw PII → used in memory → immediately destroyed
@@ -337,7 +337,7 @@ Stored:
 
 ---
 
-# ⚙️ 14. Design Philosophy
+#  14. Design Philosophy
 
 * ✅ Simple (HMAC, not heavy ZK)
 * ✅ Secure (no PII storage)
@@ -346,7 +346,7 @@ Stored:
 
 ---
 
-# 🏆 15. Key Strengths
+#  15. Key Strengths
 
 * Privacy-first AI pipeline
 * Verifiable anonymisation (ZK-style)
@@ -356,7 +356,7 @@ Stored:
 
 ---
 
-# ⚡ 16. Final Insight
+#  16. Final Insight
 
 > **Anonymisation hides identity
 > ZK proves correctness
@@ -364,7 +364,7 @@ Stored:
 
 ---
 
-# 🟢 17. Conclusion
+#  17. Conclusion
 
 NIYAM provides a **simple, secure, and production-ready anonymisation system** that ensures:
 
@@ -375,4 +375,4 @@ NIYAM provides a **simple, secure, and production-ready anonymisation system** t
 
 ---
 
-👉 Built for real-world regulatory deployment.
+Built for real-world regulatory deployment.
